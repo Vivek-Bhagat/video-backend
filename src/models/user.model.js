@@ -18,7 +18,7 @@ const userSchema = new Schema(
       lowercase: true,
       trim: true,
     },
-    fullname: {
+    fullName: {
       type: String,
       required: true,
       trim: true,
@@ -27,7 +27,6 @@ const userSchema = new Schema(
     avatar: {
       type: String, // Cloudnary url service for avatar
       required: true,
-      trim: true,
     },
     coverImage: {
       type: String, // Cloudnary url service for
@@ -78,7 +77,6 @@ userSchema.methods.generateRefreshJWT = function () {
   return jwt.sign(
     {
       _id: this._id,
-      
     },
     process.env.REFRESH_TOKEN_SECRET,
     {
