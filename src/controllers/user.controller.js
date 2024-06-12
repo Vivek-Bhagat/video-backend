@@ -79,15 +79,3 @@ const registerUser = asyncHandler(async (req, res) => {
 });
 
 export { registerUser };
-
-//steps for registering
-
-// get the user details from frontend
-// validattion of email - not empty
-// check if the user is already registered
-// check fro the images , check for the avatar
-// upload the image in cloudanary
-// create the user object - create the entry in databse
-// remove password and refresh token from field of the response
-// check for user creation
-// return response
